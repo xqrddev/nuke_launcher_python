@@ -29,9 +29,17 @@ def main():
         easygui.msgbox("Ending Successful", title= "Nuke Launcher")
  elif reply == "NEUTRALIZE":
     #Neutralize Function
-    neuchoise = easygui.enterbox("What Country would you like to NEUTRALIZE?")
-    easygui.msgbox("Neutralizing  " + neuchoise, title= "Nuke Launcher" )
-    easygui.msgbox("Task Successful", title= "Nuke Launcher")
+    neuchoise = easygui.buttonbox("What Action?",title= "Nuke Launcher", choices=("Neutralize Weapons","DDOS","Back"))
+    if neuchoise == "Neutralize Weapons":
+        neuname = easygui.enterbox("Enter Country Here: ")
+        easygui.msgbox("Neutralizing  " + neuname, title= "Nuke Launcher" )
+        easygui.msgbox("Task Successful", title= "Nuke Launcher")
+    if neuchoise == "DDOS":
+        DOSname = easygui.enterbox("Enter Place Here: ")
+        easygui.msgbox("DDOS'ing  " + DOSname, title= "Nuke Launcher" )
+        easygui.msgbox("Task Successful", title= "Nuke Launcher")
+    if neuchoise == "Back":
+        main()
  elif reply == "EXIT":
     easygui.msgbox("Exiting...")
 code()
@@ -39,3 +47,4 @@ main()
 #Note: this is just for fun it doesn't actually nuke things (you can use it for tiktoks or whatever idc)
 #By xqrzguy for fun :)
 #Making this project to learn python and easygui module
+#ignore the OLD and .vscode file
