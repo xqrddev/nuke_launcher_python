@@ -42,20 +42,34 @@ def main():
     if neuchoise == "Back":
         main()
  elif reply == "FUN STUFF":
-    fun = easygui.buttonbox("Which Action?", choices = ("Fake IP", "Random MC Seed", "W.I.P"))
+    fun = easygui.buttonbox("Which Action?", choices = ("Fake IP", "Harmless Virus", "Rickroll"))
     if fun == "Fake IP":
         i = random.randint(10,240)
         j = random.randint(10,240)
         k = random.randint(10,240)
         l = random.randint(10,240)
-        easygui.codebox("Copy Fake Ip: (this IS FAKE) " + str(i) + "." + str(j) + "." + str(k) + "." + str(l))
-    if fun == "Random MC Seed":
-        o = random.randint(1,1000000000000)
-        easygui.codebox("Copy Seed: " + str(o))
-    if fun == "W.I.P":
-        easygui.msgbox("This is W.I.P, But you can send feedback.")
-        easygui.enterbox("Send Feedback here: ")
-        easygui.msgbox("Thx for feedback! (Even tho this doesnt work)")
+        func = str(i) + "." + str(j) + "." + str(k) + "." + str(l)
+        easygui.codebox("Copy Fake Ip: (this IS FAKE) " + func)
+    if fun == "Harmless Virus":
+        #Creates A File in the same directory as the program
+        fp = open('prank.txt', 'w')
+        fp.write('X=MsgBox("Error while opening Computer. Do you want to Fix this Error?",4+64,"Error (0x64G1734)")\n')
+        fp.write('X=MsgBox("Unable to Fix this Error. Do you want to scan this Computer",3+48,"Scan")\n')
+        fp.write('X=MsgBox("Scanning.",3+48,"Scan")\n')
+        fp.write('X=MsgBox("1 Virus Found! Would you like to remove this virus?",3+48,"Threat Found")\n')
+        fp.write('X=MsgBox("Error Virus Is Activated, Shutting Down..",3+48,"Error (0x536G3641")\n')
+        fp.write('X=MsgBox("Just Kidding, Fooled ya!",3+48,"FOOLED")\n')
+        fp.write('X=MsgBox("This is just a prank LOL.",3+48,"FOOLED")\n')
+        fp.write('DELETE THIS NOTE: Save this with "Save As" and type and the end ".vbs" then click and it will work\n')
+        fp.write('DELETE THIS NOTE: You can edit what ever you want before you save the file as vbs\n')
+        fp.close()
+    if fun == "Rickroll":
+        m = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        n = "https://www.youtube.com/watch?v=xvFZjo5PgG0"
+        o = "https://www.youtube.com/watch?v=fm4fLvDPv0Y"
+        p = "https://www.youtube.com/watch?v=QB7ACr7pUuE"
+        q = "https://www.youtube.com/watch?v=a6pbjksYUHY"
+        easygui.codebox("Rickroll links here: (Scroll for more links)" + m + " " + n + " " + o + " " + p + " " + q )
 code()
 main()
 #Note: this is just for fun it doesn't actually nuke things (you can use it for tiktoks or whatever idc)
